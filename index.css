@@ -48,7 +48,7 @@ body {
 #slider-card {
     background-color: white;
     width: 35%;
-    min-width: 375px;
+    min-width: 325px;
     height: 45%;
     box-shadow: 0 5px 15px 10px rgba(0, 0, 0, .05);
     padding: 2rem 2rem 1rem 2rem;
@@ -181,8 +181,51 @@ li {
     
 }
 
-
-
-
 .attribution { position: absolute; bottom: 0; right: 0; font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width: 375px) {
+    body {
+        justify-content: flex-start;
+    }
+    #title {
+        font-size: x-small;
+        margin-top: 2rem;
+    }
+    #title p {
+        font-size: 13px;
+        text-align: center;
+        max-width: 180px;
+        margin: auto;
+        padding-top: .5rem;
+    }
+    #main-container {
+        width: 100vw;
+        height: 100vh;
+        justify-content: flex-start;
+    }
+    #slider-card {
+        height: unset;
+    }
+    #slider-price {
+        flex-direction: column;
+    }
+    #slider-rate >* {
+        margin: .25rem;
+    }
+    .discount {
+        border-radius: 10px;
+    }
+    #slider-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
