@@ -13,6 +13,7 @@ const rates = [
     {pvs: "1M PAGEVIEWS", ppm: 36.00}
 ]
 let isYearlyBilling = false
+let isTouching = false
 
 
 function handleToggle() {
@@ -47,4 +48,5 @@ inputElement.addEventListener('mousemove', ()=> handleMove())
 inputElement.addEventListener('touchmove', ()=> handleMove())
 toggle.addEventListener('click', ()=>handleToggle())
 window.addEventListener('resize', ()=>screenSizeChange())
+screenSizeChange()
 
