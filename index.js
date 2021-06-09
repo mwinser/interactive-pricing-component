@@ -32,6 +32,8 @@ function handleMove(){
     price.innerHTML = '$' + rate.toFixed(2)
 
 }
+inputElement.addEventListener('click', ()=> handleMove())
+inputElement.addEventListener('touchend', ()=> handleMove())
 inputElement.addEventListener('mousemove', ()=> handleMove())
 inputElement.addEventListener('touchmove', ()=> handleMove())
 toggle.addEventListener('click', ()=>handleToggle())
