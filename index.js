@@ -11,7 +11,7 @@ const rates = [
     {pvs: "1M PAGEVIEWS", ppm: 36.00}
 ]
 let isYearlyBilling = false
-let isChanging = false
+
 
 function handleToggle() {
     isYearlyBilling = !isYearlyBilling
@@ -23,16 +23,15 @@ function handleToggle() {
 }
 
 function handleMove(){
-    if (isChanging){
-        let progress = inputElement.value/(inputElement.max-inputElement.min)*100
-        inputElement.style.setProperty("--webkitProgressPercent", progress + '%')
-        pageViews.innerHTML = rates[inputElement.value].pvs
-        let rate = rates[inputElement.value].ppm
-        if (isYearlyBilling) rate*=.75
-        price.innerHTML = '$' + rate.toFixed(2)
-    }
+
+    let progress = inputElement.value/(inputElement.max-inputElement.min)*100
+    inputElement.style.setProperty("--webkitProgressPercent", progress + '%')
+    pageViews.innerHTML = rates[inputElement.value].pvs
+    let rate = rates[inputElement.value].ppm
+    if (isYearlyBilling) rate*=.75
+    price.innerHTML = '$' + rate.toFixed(2)
+
 }
-inputElement.addEventListener('mousedown', ()=> isChanging=true)
 inputElement.addEventListener('mousemove', ()=> handleMove())
-inputElement.addEventListener('mouseup', ()=> isChanging=false)
+inputElement.addEventListener('touchmove', ()=> handleMove())
 toggle.addEventListener('click', ()=>handleToggle())
