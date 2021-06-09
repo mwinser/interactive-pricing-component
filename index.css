@@ -40,13 +40,18 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+#title p {
+    color: hsl(225, 20%, 60%);
+    font-size: 15px;
+    font-weight: 400;
+}
 #slider-card {
     background-color: white;
     width: 35%;
     min-width: 375px;
     height: 45%;
     box-shadow: 0 5px 15px 10px rgba(0, 0, 0, .05);
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,18 +59,31 @@ body {
 #slider-price {
     display: flex;
     justify-content: space-between;
-    font-size: .8rem;
+    align-items: center;
+    font-size: .9rem;
     text-align: center;
+}
+#price-per-month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#price {
+    font-size: 2rem; 
+    font-weight: 800; 
+    text-align: right;
+    color: hsl(227, 35%, 25%);
+    padding-right: .5rem;
 }
 #slider-container {
     width: 100%;
 }
 #slider {
-  appearance: none;
-  width: 97%;
-  height: 10px;
-  border-radius: 1rem;
-  position: relative;
+    appearance: none;
+    width: 97%;
+    height: 10px;
+    border-radius: 1rem;
+    position: relative;
   --webkitProgressPercent: 75%; /* workaround for webkit progress fill */
 }
 
@@ -96,7 +114,7 @@ body {
 #slider-rate {
     display: flex;
     justify-content: flex-end;
-    font-size: smaller;
+    font-size: 12px;
 }
 #slider-rate >* {
     margin: 0 .5rem;
@@ -134,6 +152,7 @@ body {
 .discount {
     color:hsl(15, 100%, 70%);
     background: hsl(14, 92%, 95%);
+    padding: 0 .25rem 0 .25rem;
 }
 #slider-details {
     display: flex;
@@ -144,7 +163,8 @@ body {
     font-size: 12px;
 }
 li {
-    list-style-image: url('./images/icon-check.svg')
+    list-style-image: url('./images/icon-check.svg');
+    padding: .35rem;
 }
 #cta-container {
     display: flex;
@@ -157,6 +177,7 @@ li {
     border-radius: 2rem;
     padding: .5rem 2rem;
     cursor: pointer;
+    font-size: 12px;
     
 }
 
