@@ -47,8 +47,6 @@ Users should be able to:
 Although I did a good job of reviewing the project beforehand and planning the structure, I did not notice the rearrangement of elements in the mobiile view until I'd already finished the desktop view. Ultimately I used CSS Grid to fix this rather than using JS to move around DOM elements on screen size changes.
 I don't use CCS Grid that often and was stuck troubleshooting for an hour because I didn't notice that I was putting quotes around my grid-area names: 
 
-To see how you can add code snippets, see below:
-
 ```css
 #pageviews {
     grid-area: pageviews; //NOT "pageviews"
@@ -58,7 +56,7 @@ I also learned about the touch events available on mobile.
 
 ### Continued development
 
-I also learned quite a bit with this project about custom sliders and the work-arounds needed because of browser compatibility issues, but ended up focusing just on Chrome. In the future I'm going to add support for Firefox, Safari and Edge.
+I also learned quite a bit with this project about custom sliders and the work-arounds needed because of browser compatibility issues, but ended up focusing just on Chrome and Firefox. In the future I'm going to look into support for Safari and Edge.
 
 ## Author
 
