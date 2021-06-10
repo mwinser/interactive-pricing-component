@@ -18,7 +18,6 @@ body {
 }
 #main-container {
     width: 90vw;
-    height: 70vh;
     background-color: hsl(230, 100%, 99%);
     background-image: url('./images/bg-pattern.svg');
     background-repeat: no-repeat;
@@ -27,6 +26,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 4rem;
     
 }
 #title {
@@ -48,8 +48,7 @@ body {
 #slider-card {
     background-color: white;
     width: 35%;
-    min-width: 325px;
-    height: 45%;
+    min-width: 400px;
     box-shadow: 0 5px 15px 10px rgba(0, 0, 0, .05);
     padding: 2rem 2rem 1rem 2rem;
     display: flex;
@@ -123,7 +122,7 @@ body {
     font-size: 12px;
 }
 #slider-rate >* {
-    margin: 0 .5rem;
+    margin: 0 .25rem;
 }
 
 .toggle {
@@ -187,8 +186,7 @@ li {
 .attribution { position: absolute; bottom: 0; right: 0; font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-
-@media (max-width: 375px) {
+@media (max-width: 475px) {
     body {
         justify-content: flex-start;
     }
@@ -205,11 +203,11 @@ li {
     }
     #main-container {
         width: 100vw;
-        height: 100vh;
-        justify-content: flex-start;
+        justify-content: unset;
     }
     #slider-card {
         height: unset;
+        min-width: 375px;
         padding: 32px 16px 16px;
     }
     #slider-price {
@@ -237,9 +235,6 @@ li {
         padding: 1.5rem 0;
         border-bottom: 1px solid hsl(225, 20%, 95%);
     }
-    #slider-rate >* {
-        margin: .25rem;
-    }
     .discount {
         border-radius: 10px;
     }
@@ -253,5 +248,7 @@ li {
         justify-content: center;
         align-items: center;
     }
-
+    .attribution {
+        position: relative;
+    }
 }
