@@ -92,7 +92,7 @@ body {
   --webkitProgressPercent: 75%; /* workaround for webkit progress fill */
 }
 
-#slider::-webkit-slider-thumb {
+#slider::-webkit-slider-thumb, #slider::-moz-range-thumb {
     appearance: none;
     width: 25px; 
     height: 25px;
@@ -102,18 +102,20 @@ body {
     position: relative;
     top: -9px;
     opacity: .7;
-
 }
-#slider::-webkit-slider-thumb:hover {
+#slider::-ms-thumb {
+    appearance: unset;
+}
+#slider::-webkit-slider-thumb:hover, #slider::-moz-range-thumb:hover {
     opacity: 1;
 }
-#slider::-webkit-slider-runnable-track {
+#slider::-webkit-slider-runnable-track, #slider::-moz-range-track{
     height: 10px;
     background-image: linear-gradient(
         90deg,
         hsl(174, 77%, 80%) var(--webkitProgressPercent),
         hsl(224, 65%, 95%) var(--webkitProgressPercent)
-  );
+    );
 }
 
 #slider-rate {
