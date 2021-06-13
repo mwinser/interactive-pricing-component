@@ -92,8 +92,8 @@ body {
   --webkitProgressPercent: 75%; /* workaround for webkit progress fill */
 }
 
-#slider::-webkit-slider-thumb, #slider::-moz-range-thumb {
-    appearance: none;
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
     width: 25px; 
     height: 25px;
     border-radius: 50%;
@@ -103,13 +103,38 @@ body {
     top: -9px;
     opacity: .7;
 }
-#slider::-ms-thumb {
-    appearance: unset;
+#slider::-moz-range-thumb {
+    width: 25px; 
+    height: 25px;
+    border-radius: 50%;
+    background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat center/60%;
+    cursor: pointer; 
+    position: relative;
+    top: -9px;
+    opacity: .7;
 }
-#slider::-webkit-slider-thumb:hover, #slider::-moz-range-thumb:hover {
+#slider:-ms-thumb {
+    width: 25px; 
+    height: 25px;
+    border-radius: 50%;
+    background: hsl(174, 86%, 45%) url("./images/icon-slider.svg") no-repeat center/60%;
+    cursor: pointer; 
+    position: relative;
+    top: -9px;
+    opacity: .7;
+}
+
+#slider::-webkit-slider-thumb:hover {
     opacity: 1;
 }
-#slider::-webkit-slider-runnable-track, #slider::-moz-range-track{
+#slider::-moz-range-thumb:hover {
+    opacity: 1;
+}
+#slider::-ms-thumb:hover {
+    opacity: 1;
+}
+
+#slider::-webkit-slider-runnable-track{
     height: 10px;
     background-image: linear-gradient(
         90deg,
@@ -117,7 +142,22 @@ body {
         hsl(224, 65%, 95%) var(--webkitProgressPercent)
     );
 }
-
+#slider::-moz-range-track{
+    height: 10px;
+    background-image: linear-gradient(
+        90deg,
+        hsl(174, 77%, 80%) var(--webkitProgressPercent),
+        hsl(224, 65%, 95%) var(--webkitProgressPercent)
+    );
+}
+#slider::-ms-track{
+    height: 10px;
+    background-image: linear-gradient(
+        90deg,
+        hsl(174, 77%, 80%) var(--webkitProgressPercent),
+        hsl(224, 65%, 95%) var(--webkitProgressPercent)
+    );
+}
 #slider-rate {
     display: flex;
     justify-content: flex-end;
